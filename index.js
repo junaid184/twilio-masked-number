@@ -39,7 +39,7 @@ app.post('/mask-number.xml', (req, res) => { //twimlApp endpoint
     statusCallbackEvent: ['initiated', 'ringing', 'answered', 'completed'],
     statusCallback: 'https://935c-43-246-221-119.eu.ngrok.io/status-callback',
     statusCallbackMethod: 'POST'
-  }, '+923232055861')
+  }, 'your_desired_number_for_call')
   res.set('Content-Type', 'text/xml');
   res.send(twiml.toString());
 });
@@ -60,8 +60,8 @@ app.post("/", (req, res) => { //for outbound call
                     </Connect>
                     <Say>I will stream the next 60 seconds of audio through your websocket</Say>
                 </Response>`,
-      to: "+14049484629",
-      from: "+19124522020",
+      to: "+1234567890",
+      from: "+98765432123",
     })
     .then((call) => res.send(call))
     .then((e) => {
